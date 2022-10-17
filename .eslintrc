@@ -1,0 +1,46 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "jest": true,
+    "node": true,
+    "es2022": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "standard"
+  ],
+  "ignorePatterns": ["build/*", "node_modules/*", "coverage/*"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 13,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "no-var": ["error"],
+    "prefer-const": ["error"],
+    "no-else-return": ["error"],
+    "prefer-rest-params": ["error"],
+    "prefer-template": ["error"],
+    "react/react-in-jsx-scope": ["off"]
+  },
+  "overrides": [
+    {
+      "files": ["*.spec.js", "*.test.js"],
+      "rules": {
+        "no-unused-expressions": "off"
+      }
+    }
+  ]
+}
