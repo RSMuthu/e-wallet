@@ -38,6 +38,7 @@ exports.register = async (req, res, next) => {
 // Logout logic
 exports.logout = (req, res, next) => {
   res.clearCookie('auth')
+  delete res.user
   delete req.headers.authorization
   res.status(200).json({ msg: 'You are logged out successfully' })
 }
